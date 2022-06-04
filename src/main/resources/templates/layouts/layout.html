@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html
+        lagn="ko"
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+<th:block th:replace="fragments/head :: headFragment"></th:block>
+
+<body class="g-sidenav-show  bg-gray-200">
+<th:block th:replace="fragments/sidebar :: sidebarFragment"></th:block>
+<main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ps ps--active-y" style="background-color: bisque;">
+    <th:block th:replace="fragments/top :: topFragment"></th:block>
+    <div class="container-fluid py-4">
+    <th:block layout:fragment="content"></th:block>
+    </div>
+</main>
+
+
+
+<th:block th:replace="fragments/script :: scriptFragment"></th:block>
+</body>
+</html>
